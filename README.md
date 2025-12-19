@@ -40,41 +40,11 @@ Bootstrap 5 (via CDN)
 
 ---
 
-📂 Estrutura do Projeto (resumida)
-
-Bolsa IFPI/
-│
-├── core/
-│   ├── migrations/
-│   ├── templates/
-│   │   └── core/
-│   │       ├── home.html
-│   │       └── form.html
-│   ├── models.py
-│   ├── views.py
-│   ├── forms.py
-│   └── urls.py
-│
-├── templates/
-│   └── base.html
-│
-├── static/
-│   └── img/
-│       └── logo.png
-│
-├── manage.py
-├── requirements.txt
-└── README.md
-
-
----
-
  Configuração do Ambiente
 
 1️⃣ Clone o repositório
 
-git clone https://github.com/luizalpha-dev/bolsas-
-educacionais-ifpi.git
+git clone https://github.com/luizalpha-dev/bolsas-educacionais-ifpi.git
 
 
 ---
@@ -192,3 +162,4 @@ Projeto desenvolvido para fins acadêmicos – IFPI.
 -Licença
 
 Este projeto é apenas para fins educacionais.
+
