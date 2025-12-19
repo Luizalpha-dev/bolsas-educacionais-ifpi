@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Bolsas Disponíveis:</h2>
+    <a href="{% url 'criar_bolsa' %}" class="btn btn-primary">
+      Cadastrar nova bolsa
+    </a>
+  </div>
+
+  <table class="table table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>Disponíveis</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for bolsa in bolsas %}
+      <tr>
+        <td>{{ bolsa.nome }}</td>
+        <td>
+          <a href="{% url 'editar_bolsa' bolsa.id %}" class="btn btn-warning btn-sm">
+            Editar
+          </a>
+          <a href="{% url 'excluir_bolsa' bolsa.id %}" class="btn btn-danger btn-sm">
+            Excluir
+          </a>
+        </td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="2">Nenhuma bolsa disponível.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</div>
+{% endblock %}
